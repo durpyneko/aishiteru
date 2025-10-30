@@ -1,6 +1,11 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/fonts/Quicksand-VariableFont_wght.ttf) format('truetype');
+}
+
 :root {
     --bg-color: #1c1c1c;
     --color: #fff3e6;
@@ -10,11 +15,13 @@ body {
     margin: 0px;
     padding: 0px;
 
+    font-family: 'Quicksand';
     color: var(--color);
-    background-color: var(--bg-color);
-    /* background-image: url(/kikuri/Danbooru_e936db753dba03b294c217a14cbdd03b.jpg);
+
+    background-color: #6a6a6a;
+    background-image: url(/kikuri/Gp5R4kOb0AAGvL5.jpg);
     background-position: center 0%;
-    background-size: auto 100vh;
-    background-repeat: no-repeat; */
-    /* background-blend-mode: multiply;c */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
