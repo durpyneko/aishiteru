@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+:root {
+    --bg-color: #1c1c1c;
+    --color: #fff3e6;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    color: var(--color);
+    background-color: var(--bg-color);
+    /* background-image: url(/kikuri/Danbooru_e936db753dba03b294c217a14cbdd03b.jpg);
+    background-position: center 0%;
+    background-size: auto 100vh;
+    background-repeat: no-repeat; */
+    /* background-blend-mode: multiply;c */
+}

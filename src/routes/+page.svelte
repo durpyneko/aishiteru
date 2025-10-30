@@ -1,0 +1,2 @@
+<div class="z-0 blur-[10px] rounded-2xl h-[100px] w-[300px]"></div>
+<div class="absolute z-[-9999] h-screen w-screen bg-[url(/kikuri/59bc11c7651e03738ffd5230db8774e6.jpg)] bg-cover bg-no-repeat"></div>
