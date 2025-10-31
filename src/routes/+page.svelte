@@ -6,7 +6,10 @@
   onMount(() => {
     if (!section) return;
 
-    const spanSize = 20; // const spanSize = Math.min(window.innerWidth, window.innerHeight) * 0.08;
+    // const baseSize = 40;
+    // const scale = Math.min(window.innerWidth, window.innerHeight) / 1080;
+    // const spanSize = baseSize * scale;
+    const spanSize = Math.min(window.innerWidth, window.innerHeight) * 0.08;
     const cols = Math.floor(window.innerWidth / spanSize);
     const rows = Math.floor(window.innerHeight / spanSize);
     const total = cols * rows;
