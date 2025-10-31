@@ -1,0 +1,18 @@
+.bg-section .bg-span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 1;
+    transition: 1.5s;
+}
+
+.bg-section .bg-span {
+    z-index: 2;
+}
+
+.bg-section .bg-span:hover {
+    background: #71426c !important;
+    transition: 0s;
+}
