@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/typography';
 
 @font-face {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif;
     src: url(/fonts/Quicksand-VariableFont_wght.ttf) format('truetype');
 }
 
@@ -18,10 +18,16 @@ body {
     font-family: 'Quicksand';
     color: var(--color);
 
-    background-color: #6a6a6a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+
+    /* background-color: #6a6a6a;
     background-image: url(/kikuri/Gp5R4kOb0AAGvL5.jpg);
     background-position: center 0%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply; */
 }
