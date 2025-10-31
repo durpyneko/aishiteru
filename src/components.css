@@ -3,7 +3,7 @@
     display: block;
     width: calc(6.25vw - 2px);
     height: calc(6.25vw - 2px);
-    background: #181818;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
     transition: 1.5s;
 }
