@@ -24,7 +24,7 @@
   class="bg-section absolute top-0 left-0 w-screen h-screen flex justify-center items-center flex-wrap gap-0.5 overflow-hidden bg-black"
 ></section>
 <div class="absolute top-0 left-0 w-screen h-screen z-2">
-  <h1>Hello World!</h1>
+  <span class="flex justify-center text-4xl p-4">Hello World!</span>
 </div>
 
 <style>
