@@ -19,13 +19,23 @@
   });
 </script>
 
+<div class="absolute top-0 left-0 h-screen w-screen z-3 pointer-events-none">
+  <div class="flex justify-center p-4 pointer-events-auto">
+    <span
+      class="px-4 py-3 text-4xl font-medium text-white
+         rounded-2xl border border-white/40
+         bg-white/10 backdrop-blur-xl
+         shadow-[0_4px_30px_rgba(0,0,0,0.1)]
+         hover:bg-white/20 transition-all duration-300"
+    >
+      Hello World!
+    </span>
+  </div>
+</div>
 <section
   bind:this={section}
   class="bg-section absolute top-0 left-0 w-screen h-screen flex justify-center items-center flex-wrap gap-0.5 overflow-hidden bg-black"
 ></section>
-<div class="absolute top-0 left-0 w-screen h-screen z-2">
-  <span class="flex justify-center text-4xl p-4">Hello World!</span>
-</div>
 
 <style>
   .bg-section {
