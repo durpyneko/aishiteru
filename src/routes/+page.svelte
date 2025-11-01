@@ -1,9 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import type { Lanyard } from "./lanyard/+server";
 
   let section: HTMLElement | null = null;
+  let lanyard = $state<Lanyard | null>(null);
 
-  onMount(() => {
+  onMount(async () => {
+    // * Background
     if (!section) return;
 
     // const baseSize = 40;
@@ -19,20 +22,37 @@
       span.classList.add("bg-span");
       section.appendChild(span);
     }
+
+    // * Lanyard / Discord API
+    const response = await fetch("/lanyard");
+    lanyard = await response.json();
   });
 </script>
 
 <div class="absolute top-0 left-0 h-screen w-screen z-3 pointer-events-none">
-  <div class="flex justify-center p-4 pointer-events-auto">
-    <span
-      class="px-4 py-3 text-4xl font-medium text-white
-         rounded-2xl border border-white/40
-         bg-white/10 backdrop-blur-xl
-         shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-         hover:bg-white/20 transition-all duration-300"
-    >
-      Hello World!
-    </span>
+  <div class="flex flex-col p-4 px-[30vw] text-neutral-400 pointer-events-auto">
+    {#if lanyard}
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-row gap-2 items-center">
+          <img
+            class="size-10 rounded-full"
+            src="https://cdn.discordapp.com/avatars/{lanyard.data.discord_user
+              .id}/{lanyard.data.discord_user.avatar}.png?size=64"
+            alt=""
+          />
+          <span class="text-2xl">
+            {lanyard.data.discord_user.global_name} ({lanyard.data.discord_user
+              .username})
+          </span>
+        </div>
+        <span class=""
+          >{lanyard.data.activities.find((a: any) => a.id === "custom")
+            ?.state}</span
+        >
+      </div>
+    {:else}
+      <span class="text-2xl">Loading user...</span>
+    {/if}
   </div>
 </div>
 <section
