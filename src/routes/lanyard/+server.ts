@@ -24,6 +24,7 @@ export interface Lanyard {
     };
     discord_status: "online" | "idle" | "dnd" | "offline";
     activities: Array<{
+      emoji: any;
       name: string;
       type: number;
       state?: string;
@@ -37,13 +38,13 @@ export interface Lanyard {
 // TODO socket.io send to client
 export async function GET() {
   const res = await fetch(
-    "https://api.lanyard.rest/v1/users/763864687481323620"
+    "https://api.lanyard.rest/v1/users/763864687481323620",
   );
 
   if (!res.ok) {
     return json(
       { error: "Failed to fetch Lanyard data" },
-      { status: res.status }
+      { status: res.status },
     );
   }
 

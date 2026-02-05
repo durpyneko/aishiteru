@@ -2,9 +2,9 @@
     position: relative;
     display: block;
     /* width: 40px; */
-    width: calc(6.25vw - 2px);
+    width: calc(6.23vw - 2px);
     /* height: 40px; */
-    height: calc(6.25vw - 2px);
+    height: calc(6.23vw - 2px);
     background: rgba(0, 0, 0, 0.7);
     z-index: 1;
     transition: 1.5s;
@@ -17,4 +17,13 @@
 .bg-section .bg-span:hover {
     background: #71426c !important;
     transition: 0s;
+}
+
+.lucide-icon {
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+}
+
+.lucide-icon:hover {
+    color: rgba(225, 225, 225, 0.8);
 }

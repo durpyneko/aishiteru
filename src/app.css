@@ -18,10 +18,10 @@ body {
     font-family: 'Quicksand';
     color: var(--color);
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; */
     background: #000;
 
     /* background-color: #6a6a6a;
@@ -30,4 +30,84 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply; */
+}
+
+@theme {
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+
+    @keyframes wiggle {
+
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+
+        50% {
+            transform: rotate(3deg);
+        }
+    }
+
+    --animate-x-move: x-move 1s ease-in-out infinite;
+
+    @keyframes x-move {
+
+        0%,
+        100% {
+            transform: translateX(-3px);
+        }
+
+        50% {
+            transform: translateX(3px);
+        }
+    }
+
+    --animate-y-move: y-move 2s ease-in-out infinite;
+
+    @keyframes y-move {
+
+        0%,
+        100% {
+            transform: translateY(-2px);
+        }
+
+        50% {
+            transform: translateY(1px);
+        }
+    }
+
+    --animate-fade-in: fade-in 500ms ease-in;
+
+    @keyframes fade-in {
+
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.svg-border {
+    stroke: rgba(255, 255, 255, 0.35);
+    stroke-width: 0.8;
+    stroke-dasharray: 6 4;
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.15));
+    transition:
+        stroke-dasharray 500ms ease,
+        stroke-dashoffset 500ms ease,
+        stroke 300ms ease,
+        filter 300ms ease;
+}
+
+/* Hover state */
+.group:hover .svg-border {
+    stroke-dasharray: 1 0;
+    /* looks solid */
+    stroke-dashoffset: -20;
+    stroke: rgba(255, 255, 255, 0.85);
+    filter:
+        drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 14px rgba(255, 255, 255, 0.3));
 }
