@@ -21,6 +21,9 @@ export interface Lanyard {
       discriminator: string;
       id: string;
       avatar: string | null;
+      avatar_decoration_data: {
+        asset: string | null;
+      };
     };
     discord_status: "online" | "idle" | "dnd" | "offline";
     activities: Array<{

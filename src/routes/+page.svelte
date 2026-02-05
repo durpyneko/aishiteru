@@ -70,13 +70,23 @@
           <div class="animate-fade-in">
             <div class="flex justify-between items-center">
               <span class="text-3xl font-bold">durpyneko</span>
-              <img
-                class="size-12 rounded-full"
-                src="https://cdn.discordapp.com/avatars/{lanyard.data
-                  .discord_user.id}/{lanyard.data.discord_user
-                  .avatar}.png?size=64"
-                alt=""
-              />
+              <div class="relative inline">
+                <img
+                  class="size-12 absolute bottom-0 left-0 scale-[1.15] origin-center object-cover"
+                  src="https://cdn.discordapp.com/avatar-decoration-presets/{lanyard
+                    .data.discord_user.avatar_decoration_data
+                    .asset}.png?size=64&passthrough=true"
+                  alt=""
+                />
+
+                <img
+                  class="size-12 rounded-full"
+                  src="https://cdn.discordapp.com/avatars/{lanyard.data
+                    .discord_user.id}/{lanyard.data.discord_user
+                    .avatar}.png?size=64"
+                  alt=""
+                />
+              </div>
             </div>
             {#if activity}
               <span class="font-bold">
